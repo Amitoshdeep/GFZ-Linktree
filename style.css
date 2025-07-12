@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Newton";
+    src: url("/assets/fonts/Newton%20Howard%20Font.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Exo2";
+    src: url("/assets/fonts/Exo2-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Donc";
+    src: url("/assets/fonts/Dune_Rise.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme{
+    --font-newton: "Newton","sans-serif";
+    --font-Exo2: "Exo2", "sans-serif";
+    --font-dunc: "Donc", "sans-serif";
+    --color-lightOrange: #ffcb97;
+    --color-highLight: #202031;
+    --text-shadow-custom: 2px 2px 10px #e0911f80,-2px -2px 10px #e0911f80, -2px 2px 10px #e0911f80,2px -2px 10px #e0911f80;
+}
+
+/* A Links */
+
+.links a{
+    @apply bg-highLight text-[14px] md:text-xl p-2.5 md:p-4 flex gap-3 items-center justify-center w-[80%] rounded-lg border-[1px] border-[#ffffff20]  duration-500;
+}
+
+.links i{
+    @apply text-amber-500 flex;
+}
+
+.links a:nth-child(2) i{
+    @apply text-red-500;
+}
+
+.links a:nth-child(3) i{
+    @apply text-indigo-400;
+}
+
+.links a:hover, .footer a:hover{
+    @apply rotate-1 scale-[1.1];
+}
+
+.links a:nth-child(2):hover{
+    @apply rotate-[-1deg] scale-[1.1];
+}
+
+.footer a{
+    @apply bg-highLight text-[#ffffff60] text-[16px] md:text-xl p-3 md:p-4 flex gap-3 items-center justify-center rounded-full border-[1px] border-[#ffffff20]  duration-500;
+}
+
+.footer i{
+    @apply flex;
+}
+
+.footer a:hover{
+    @apply text-amber-500;
+}
